@@ -24,6 +24,8 @@ svb 	- show vlan brief
 scn	- show cdp neighbor
 sir	- show ip route
 
+Read
+
 
 
 
