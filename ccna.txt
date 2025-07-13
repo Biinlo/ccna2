@@ -1,3 +1,5 @@
+Day 1
+
 Switch
 SVI
 DHCP
@@ -8,8 +10,6 @@ CUCM
 Analog Phone
 Voip Phone
  
-
-
 show tech-support
 enter	- show per line of config
 space	- show many lines of config
@@ -24,20 +24,13 @@ svb 	- show vlan brief
 scn	- show cdp neighbor
 sir	- show ip route
 
-Read
-
-
-
-
 config t- Pasig mode : All Touch,
 hostname
 enable secret pass
 no logging console
 
-
 int fa0/0 - (config-if)
 router bgp 1000 - (config-router)
-
 
 first five
 hostname COREtaas-_
@@ -58,6 +51,127 @@ line vty 0 14
       login
       exec-timeout 0 0
 
+
+================================================================================
+
+
+Day 2
+
+Day1 Config (Switch, Routers, Cameras, Phones)
+Subneting (Rivan Hands, Ipv4 & Ipv6)
+
+2908	2.255.0.254	2f0e
+2909	2.255.0.255	2f0f
+2910	2.255.1.0	2f10
+
+6098	6.0.255.254	60fe
+6099	6.0.255.255	60ff
+6100	6.1.0.0		6100
+
+f = 255
+e = 254
+
+195	=8
+3	=2
+1750	=11
+1855	=11
+2700	=12
+2	=2
+376	=9
+888	=10
+8	=4
+212	=8
+4500	=13
+81	=7
+20000	=15
+55	=6
+
+
+
+10.0.0.0/8
+
+Convertit: 2800 - 12bits
+Subtract: /32 - /12 = /20
+IpasoksaHiwa: Ipasok 16i sa 3rd
+Telus.com: 10.0.16.0/20 +1
+1stIP: 10.0.16.1
+LastIP: 10.0.31.255
+NotTelus.com: 10.0.32.0/20 -1
+
+C: 4500 - 13bits
+S: /32 - 13 = /19
+I: Ipasok si 32i sa 3rd hiwa
+Etelecare.com: 10.0.32.0/19 +1
+1stIP: 10.0.32.1/19
+LastIP: 10.0.63.255/19
+NotTelus.com: 10.0.64.0/19 -1
+
+C: 750 - 10bits
+S: /32 - /10 = /22
+I: Ipasok si 4i sa 3rd hiwa
+Sykes.com: 10.0.4.0/22 +1
+1stIP: 10.0.4.1/22
+LastIP: 10.0.7.255/22
+NotSykes.com: 10.0.8.0/22 -1
+
+C: 220 = 8bits
+S: /32 = 8 = /24, 3rd, 1i
+I: Ipasok is 1i sa 3rd hiwa
+PNP.GOV.PH: 10.0.1.0/24 +1
+1stIP: 10.0.1.1/24
+LastIP: 10.0.1.255/24
+PNP.GOV.PH: 10.0.2.0/24 -1
+
+C: 1750 = 11 bits
+S: /32 - /11 = 21, 3rd, 8i
+I: Ipasok is 8i sa 3rd hiwa
+PNP.GOV.PH: 10.0.8.0/21 +1
+1stIP: 10.0.8.1/21
+LastIP: 10.0.15.255/21
+PNP.GOV.PH: 10.0.16.0/21 -1
+
+
+Master 5 hit combo
+1. NetworkAddress
+2. ValidRange
+3. Broadcast
+4. no. of host
+5. no of subsets.
+
+Ex1: 192.168.50.99/27
+1. /27 > 4th,32i(0, 32, 64, 96, 128) == netadd: .96
+2. Valid: .97-127
+3. Broadcast: .127
+4. Host: /32 - / = /27 == 2r5 32 - 2: 30 host.
+5. Subnets: /24 + / = /27 == 2r3 = 6 subnets
+
+Ex2: 192.168.10.50/29
+1. /27 > 4th, 8i(0, 8, 16, 24, 32, 40, 48, 56) == netadd: .48
+2. Valid: .49 - .55
+3. Broadcast: .55
+4. /32 - (/3) = /29 == 2r3=8-2 == 6 host
+5. /24 + (/5) = /29 == 
+
+Ex3: 192.168.25.85/26
+1./26 > 4th,64i(0, 64, 128) == netadd: .64
+2. Valid: .64 - .126
+3. Broadcast: .127
+4. /32 - (/6) = /26 == 2r6=64-2 == 62 host
+5. /24 + (/2) = /26 == 2r2=4-2 == 2 host
+
+Ex4: 192.168.25.115/28
+1. /28 > 4th,16i(0,16,32) == netadd: .16
+2. Valid: .16 - .31
+3. Broadcast: .30
+4. /32 - (/4) = /28 == 2r4=16-2 == 14host
+5. /24 + (/4) = /28 == 2r4=16-2 == 14host
+
+Ex4: 172.16.70.23/22 > 3rd,4i
+1. 4i(0,64,68) == netadd: .64
+2. Valid: .64 - .68
+3. Broadcast: 172.16.71
+4. /32 - (/10) = /22 == 2r10=1024-2 == 1022host
+5. /16 + (/6) = /22 == 2r6=64-2 == 62host
 
 
 
