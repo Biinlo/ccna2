@@ -4,19 +4,20 @@ BINARY TO HEX TO DECIMAL
 
 Task1: 5 mins answers:
 #PAGE 17 
-
 1. 000a:000c:0000:0000:0000:0000:0000:0000/64 =
-	a:c:: /64
+	
 2. 0000:0000:0000:0000:0000:0000:0000:0000/0 = 
-	::/0		
+			
 3. fe80:0000:0000:0000:000a:0000:0000:000f/64 =
-	fe80::a:0:f/64
+	
 4. 2002:6500:0000:3000:0000:0000:0000:0000/64 = 
-	2002:6500:0:3000::/64
+	
 5. 0000:0000:0000:0000:0000:0000:0000:0001/128 = 
-	::1/128
+	
 6. ff00:0000:0000:beef:a00a:0aa0:0000:0000/8 = 
-	FF00:0:0:BEEF:A00A:AA0:: /8
+
+
+Total additional assigned /48s: ~18 individual /48 blocks beyond the initial /32.
 
 IPV6 SUBNETTING:
 fec0:aabb:fafa:dada::/64 subnet to 22 offices/subnets:
@@ -117,7 +118,6 @@ int e1/0
  ipv6 add dada:dada:fafa:fafa::/64 EUI-64
  do sh ipv6 int brief
 end
-
 Method3: STatic IPv6 address manual: IKAW LAHAT 
 @EDGE
 config t
@@ -142,9 +142,10 @@ ipv6  route  ::/0   face:cafe:face:cafe::aaaa
 
 How to jailBreak forgotten Password:
 1. remove power, press mode after 8 secs:
-2. switch: 
+2. switch:   HOW TO JAILBREAK A CISCO SWITCH:
             flash_init
 	    load_helper
+            rename flash:config.text flash:config.old
             delete  flash:config.text
             boot
 
@@ -221,7 +222,7 @@ Top 5 brands: PANG MAYAMAN
 1.Cisco = 75% =google,aws,azure,etc,
         Cisco Invented the FirstEthernetSW
         Cisco Patent Expires.
-2.Dell
+2.Dell/ExtremeNetwork/Arista/AlliedTelesys
 3.HP procurve
 4.Juniper/Fortinet
 5.Huawei      =
@@ -248,7 +249,7 @@ Switch:  flash_init
 TASK5: HOW TO SPOT A VERY HEALTHY SWITCH?
 super healthy: "all flashing green."
 amber/orange: needs help. - you are protected
-##how to LEGallY steal your Expensive Cisco @ office:
+##how to LEGallY "defective" your Expensive Cisco @ office:
 create vlans,
 transfer ports to vlans
 delete the vlan
@@ -330,11 +331,14 @@ AlternatePort/AP = blk port of nonRootPorts
 BackupPort = yuck yuck, suck urself. enter urself, self-service
 
 how becomes RootPort = kanangKamay
-Cost >> Priority >> Number
+Cost >> Priority >> Number, lowest cost WINS!
+10G cost - 1
+1gig cost = 4
+faE cost = 19
 
 who is darna: 802.1d
 kabit PC = 30s
-putol trunk, recover =30s, acceptable? BANK,HOst,Pol,Mil
+putol trunk, recover =30s, acceptable? BANK,PolHOst,,Mil
 
 TASK10: Rapid Spanning-tree Protocol: 802.1w
 TAAs/BABA: tikam si wonderWoman/bilis labasan: taas,baba,d1,d2,a1,a2:
@@ -724,5 +728,7 @@ how to get certified:
 2. Lab: NAT and DHCP:
 
 3. ask sa CHAT: "latest reivewer"
+
+
 
 
