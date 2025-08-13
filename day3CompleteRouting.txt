@@ -122,7 +122,7 @@ int e0/0
 !A1: creating Floating Default route and Secondary Default Route:
 config t
 ip route 0.0.0.0 0.0.0.0 192.168.1.129 1
-ip route 0.0.0.0 0.0.0.0 192.168.1.130 2
+ip route 0.0.0.0 0.0.0.0 192.168.1.130 5
 do sh ip route static
 A2:
 config t
@@ -132,7 +132,7 @@ int e1/0
 !A2: creating primary and backup default route:
 config t
 ip route 0.0.0.0 0.0.0.0 192.168.1.130 1
-ip route 0.0.0.0 0.0.0.0 192.168.1.129  2
+ip route 0.0.0.0 0.0.0.0 192.168.1.129 5
 do sh ip route static
 p1:
 config t
@@ -164,7 +164,7 @@ How to Create Default Route Cisco/PC/EndDevices:
 p1:
 config T
 ip route 0.0.0.0  0.0.0.0 10.2.1.1 1
-ip route 0.0.0.0  0.0.0.0 10.2.1.2 2
+ip route 0.0.0.0  0.0.0.0 10.2.1.2 5
 !floating Static Routes
 do sh ip route static
 
@@ -464,4 +464,5 @@ Howt to configure Site 2 site VPN JP to PH:
 https://
 
 TASK6: FUndamentals of Cisco network Security:
+
 
